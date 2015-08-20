@@ -1,0 +1,21 @@
+;~ Tanks Instant workstation
+
+URLDownloadToFile,https://github.com/ttnnkkrr/ControlSPY/releases/download/1.0/ControlSPY.exe,%A_ScriptDir%\ControlSPY.exe
+run ControlSPY.exe
+
+URLDownloadToFile,https://github.com/ttnnkkrr/iWebLearner/releases/download/2.5/ahk.web.recorder.exe,%A_ScriptDir%\ControlSPY.exe
+run ControlSPY.exe
+
+
+
+
+URLDownloadToFile,http://fincs.ahk4.net/scite4ahk/dl/s4ahk-portable.zip,%A_ScriptDir%\s4ahk-portable.zip
+
+objShell := ComObjCreate( "Shell.Application" )
+objSource := objShell.NameSpace( A_ScriptDir "\s4ahk-portable.zip" ).Items()
+FileCreateDir, % A_ScriptDir "\s4ahk-portable"
+objTarget := objShell.NameSpace(A_ScriptDir "\s4ahk-portable")
+
+intOptions = 256
+objTarget.CopyHere(objSource, intOptions)
+run "%A_ScriptDir%\\s4ahk-portable.zip\SciTE\SciTE.exe"
