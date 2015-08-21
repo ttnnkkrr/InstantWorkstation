@@ -5,6 +5,8 @@ run ControlSPY.exe
 
 URLDownloadToFile,https://github.com/ttnnkkrr/iWebLearner/releases/download/2.5/ahk.web.recorder.exe,%A_ScriptDir%\ahk.web.recorder.exe
 run ahk.web.recorder.exe
+URLDownloadToFile,https://raw.githubusercontent.com/ttnnkkrr/iWebLearner/master/IE%20function,%A_ScriptDir%\IE%20function.ahk
+
 
 
 
